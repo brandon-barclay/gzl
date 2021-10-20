@@ -1,0 +1,7 @@
+[Tests]
+  [darcy_heat_conduction]
+    type = Exodiff
+    input = darcy_heat_conduction.i
+    exodiff = darcy_heat_conduction_out.e
+    []
+  []
