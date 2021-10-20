@@ -1,0 +1,7 @@
+[Tests]
+  [darcy_pressure_w_material]
+    type = Exodiff
+    input = darcy_pressure.i
+    exodiff = darcy_pressure_out.e
+    []
+  []

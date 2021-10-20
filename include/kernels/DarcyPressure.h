@@ -12,6 +12,6 @@ public:
 protected:
   virtual ADReal computeQpResidual() override;
 
-  const Real & _permeability;
-  const Real & _viscosity;
+  const ADMaterialProperty<Real> & _permeability;
+  const ADMaterialProperty<Real> & _viscosity;
 };
