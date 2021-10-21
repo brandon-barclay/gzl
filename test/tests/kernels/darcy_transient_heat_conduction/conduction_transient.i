@@ -32,7 +32,7 @@
     value = 350
   []
   [outflow]
-    type = HeatConductionOutflow
+    type = ADDirichletBC
     variable = temperature
     boundary = right
     value = 300
@@ -55,11 +55,16 @@
 
 [Executioner]
   type = Transient
-  steady_state_detection = true
-  num_steps = 18
+  num_steps = 5
   solve_type = NEWTON
   petsc_options_iname = '-pc_type'
   petsc_options_value = 'hypre'
+  [TimeStepper]
+    type = IterationAdaptiveDT
+    optimal_iterations = 1
+    linear_iteration_ratio = 1
+    dt = 0.5
+  []
 []
 
 [Outputs]
